@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package student.registation.system;
+package sudent_registation;
 
 /**
  *
@@ -31,19 +31,19 @@ public class CreateAccount extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        email = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        username = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        comform = new javax.swing.JButton();
+        cancle = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        comformpassword = new javax.swing.JPasswordField();
+        password = new javax.swing.JPasswordField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        contact = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,12 +83,12 @@ public class CreateAccount extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(236, 240, 241));
         jLabel3.setText("Enter Contact Number :-");
 
-        jTextField2.setBackground(new java.awt.Color(108, 122, 137));
-        jTextField2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        email.setBackground(new java.awt.Color(108, 122, 137));
+        email.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        email.setForeground(new java.awt.Color(255, 255, 255));
+        email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                emailActionPerformed(evt);
             }
         });
 
@@ -101,12 +101,12 @@ public class CreateAccount extends javax.swing.JFrame {
             }
         });
 
-        jTextField4.setBackground(new java.awt.Color(108, 122, 137));
-        jTextField4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        username.setBackground(new java.awt.Color(108, 122, 137));
+        username.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        username.setForeground(new java.awt.Color(255, 255, 255));
+        username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                usernameActionPerformed(evt);
             }
         });
 
@@ -118,23 +118,28 @@ public class CreateAccount extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Create New Account");
 
-        jButton1.setBackground(new java.awt.Color(34, 167, 240));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Comform");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        comform.setBackground(new java.awt.Color(34, 167, 240));
+        comform.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        comform.setForeground(new java.awt.Color(255, 255, 255));
+        comform.setText("Comform");
+        comform.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                comformMouseClicked(evt);
+            }
+        });
+        comform.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                comformActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(242, 38, 19));
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Cancel");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        cancle.setBackground(new java.awt.Color(242, 38, 19));
+        cancle.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        cancle.setForeground(new java.awt.Color(255, 255, 255));
+        cancle.setText("Cancel");
+        cancle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                cancleActionPerformed(evt);
             }
         });
 
@@ -146,20 +151,16 @@ public class CreateAccount extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(236, 240, 241));
         jLabel10.setText("Enter Password :-");
 
-        jPasswordField1.setText("jPasswordField1");
-
-        jPasswordField2.setText("jPasswordField1");
-
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(236, 240, 241));
         jLabel7.setText("Enter Email Address :-");
 
-        jTextField5.setBackground(new java.awt.Color(108, 122, 137));
-        jTextField5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        contact.setBackground(new java.awt.Color(108, 122, 137));
+        contact.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        contact.setForeground(new java.awt.Color(255, 255, 255));
+        contact.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                contactActionPerformed(evt);
             }
         });
 
@@ -172,9 +173,9 @@ public class CreateAccount extends javax.swing.JFrame {
                 .addContainerGap(223, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(cancle)
                         .addGap(42, 42, 42)
-                        .addComponent(jButton1)
+                        .addComponent(comform)
                         .addGap(111, 111, 111))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel8)
@@ -185,7 +186,7 @@ public class CreateAccount extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(44, 44, 44)
-                        .addComponent(jTextField5))
+                        .addComponent(contact, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -195,10 +196,10 @@ public class CreateAccount extends javax.swing.JFrame {
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(44, 44, 44)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
-                            .addComponent(jTextField2)
-                            .addComponent(jPasswordField1)
-                            .addComponent(jPasswordField2))))
+                            .addComponent(username, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
+                            .addComponent(email)
+                            .addComponent(comformpassword)
+                            .addComponent(password))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -214,28 +215,28 @@ public class CreateAccount extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addGap(55, 55, 55)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comformpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cancle, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comform, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -260,29 +261,34 @@ public class CreateAccount extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_emailActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_usernameActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void cancleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_cancleActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void comformActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comformActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_comformActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void contactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_contactActionPerformed
+
+    private void comformMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comformMouseClicked
+
+        
+    }//GEN-LAST:event_comformMouseClicked
 
     /**
      * @param args the command line arguments
@@ -320,8 +326,11 @@ public class CreateAccount extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton cancle;
+    private javax.swing.JButton comform;
+    private javax.swing.JPasswordField comformpassword;
+    private javax.swing.JTextField contact;
+    private javax.swing.JTextField email;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -332,11 +341,8 @@ public class CreateAccount extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JPasswordField password;
+    private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
 }
